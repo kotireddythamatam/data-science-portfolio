@@ -1,4 +1,21 @@
 
+Always data speaks with each person or organization differently.
+
+Ex: We have last 10 years rain data in Praksam distict with location, time, date, rain centimeters, mandal, village, affect, people effected, homes destroyed, etc
+
+If you are rural and urban town planning engineer, you need 
+	1. How many homes collapsed?
+	2. Is there any drinage problem occured?
+	3. Is water stayin in village itself?
+
+If you are appolo hospital owner
+	1. How many people affected due to home collapse?
+	2. How many people affected due to weather changes like fever, cold etc?
+	3. Do we have bones specialist and corresponding medicines?
+	4. Do we have seasonal fever specialist and corresponding madicines?
+
+
+
 Statistics:
 ----------
 Statistics is a mathematical science of collecting, cleaning, exploring, analysing and interpretation of data.
@@ -106,6 +123,9 @@ There should be logic for selecting sample.
 ex: every 5th person in a class is my sample data.
 
 
+what is convinence sampling:
+This is a type of sampling with biased
+
 
 What are different types of statistics?
 1. Descriptive Statistics
@@ -120,6 +140,11 @@ What is inferential statistics?
 Making predictions about a population using sample data.
 
 
+What are classifications of data analytics?
+1. Descriptive Analytics (What happened?)
+2. Diagnostic Analytics (Why did it happended?)
+3. Predective Analytics (What will happen?)
+4. Prescriptive Analytics (How can we make it happen?)
 
 
 What are different types of descriptive statistics?
@@ -258,11 +283,34 @@ Data which is not fully organized in fixed format but predefined scema
 Ex: Json, xml, html etc
 
 
+What is difference between analysis and Analytics?
+Analysis and analytics both looks same but they are different. Analysis will focus on past data and analytics will focus on future data.
+Analytics is a scientific process of transforming data into insights for better decision making.
 
 
+what are different types of variables?
+1. Categorical
+2. Numerical
 
 
+What is categorical varibles?
+Varabiles which can be grouped based on it's category
+ex: gender, marriage status, colors etc
 
+
+What are numerical variables?
+1. Descrete
+2. Continuous
+
+
+What is descrete variables?
+Discrete variable one in which no value can be assumed between two given values. Variables which can be counted as integers.
+ex: no.of childrens, no.of bugs etc.
+
+
+What is continuous variables?
+Continuous variable on in which any value can be assumed between tow given values. Variables which can be counted as float numbers.
+ex: weight, time etc.
 
 
 

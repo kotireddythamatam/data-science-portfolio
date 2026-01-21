@@ -33,9 +33,6 @@ Getting insites from data.
 
 
 
-
-
-
 Biological nueron:
 -----------------
 A biological nueron is a nerve cell in brain. Artificial nueral networks are inspired by biological nuerons in brain.
@@ -391,10 +388,6 @@ ANN can solve below problems:
 
 
 
-
-
-
-
 Neural network work flow:
 -------------------------
 Input Layer: Take data as input
@@ -494,9 +487,37 @@ Iterations:
 No.of batches needed to complete one epoch
 
 
+What is difference between shallow and deep nueral networks?
+Shallow nueral networks have less no.of hidden layers like 1, 2 etc
+Deep nueral networks have more no.of hidden layers like 10, 20, 100 etc
 
 
+What will happen if learning rate is too high and too low?
+If learning rate is too high then model jumps over global minima, never converge
+If learning rate is too low then model training becomes very slow and may get stuck
 
+
+Why do we initialize weights randomly?
+To avoid all nuerorns learning same.
+
+
+What is Xavier (Glorot) Initialization?
+It is one of the weight initilization technique.
+It is designed for sigmoid and tanh activation functions for keeping variance of activations same across all layers.
+It avoids gradient descent problem
+ex: Dense(units=128, activation='tanh', kernel_initializer='glorot_uniform')
+
+
+What is He initialization?
+
+It is also one of the weight initilization technique.
+It is designed for Relu famaly action funtions, while relu kills x < 0 so he initiliation compensate it.
+It avoid dead nuerons.
+ex: Dense(units=128, activation='relu', kernel_initializer='he_normal')
+
+
+What is purpose of softmax?
+It converts scores of all probabilities of sum equal to 1
 
 
 
