@@ -1,0 +1,68 @@
+
+Data analysis steps:
+--------------------
+1. Load data in dataframe
+	- better to load required columns if you have idea on data else load all columns
+2. Cleaning data
+	- check data types of data, make change if necessary
+	- remove or fill null values
+	- identify and remove outliers, if outliers are very extreme values and cause data uncertainity then remove outliers first then work on null values.
+
+
+ 
+
+
+
+
+
+
+Pandas is a python library which used to loading, cleaning, exploring, manipulate and analyze data.
+
+Covariance is how two variables change together.
+
+Correlation measures strength and direction of relation, it is alsowan between -1 and 1.
+
+Pandas Series is used to analyze one dimentional array.
+
+Pandas DataFrame is used to analyze two dimentional array.
+
+
+If we use [] in pandas with loc or iloc then it will return dataframe.
+
+python dict and json looks same but there is a key difference
+dict datatype is dict and json is str.
+dict keys can be str, int, tuple etc but json keys always str.
+dict key, values can be specified in single or double codes but json key, values are double codes only.
+
+dropna() returns new dataframe and will not change original dataframe.
+for updating in original data frame keep inplace = True.
+
+fillna() used to update null values with specified value.
+This also return new dataframe, if we keep inplace = True then it will update in original dataframe.
+
+axis in pandas will determines operation is on rows or columns
+if axis=0 then operation is on rows
+if axis=1 then operation is on columns
+
+If missing data is small means < 5% and if we remove then no impact on data then droping is fine else filling null values is best option
+Identify which all are essential columns. Some times null values are in non-essessential columns, better to remove those columns insted of records and make sure no impact on data
+Some times null values are in non-recoverable columns like phonenumber, There is no way to fill phone numbers better to remove those records and make sure no impact on data
+better to fill null values with mean or median if data type is integers and if data type is string then mode will work as categorical variable.
+
+dropna function with how="any", it will delete if single null value, it is default value
+dropna function with how="all", it will delte if all values are null
+
+
+
+how to handle null and outliers and how to know normal distribution or scew 
+
+
+
+
+
+
+
+
+
+
+

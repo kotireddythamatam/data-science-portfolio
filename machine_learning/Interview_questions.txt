@@ -1,0 +1,260 @@
+
+
+
+What is machine learning?
+It is a subset of artificial intelligence. Making machines learn from data, means machines learn from data instead of explicity programmed. In other words, making machines self learn insted of some external training.
+
+Machine learning uses algorithms to:
+Learn patterns from data
+Improve performance with experience
+Make predictions or decisions based on what it learned
+
+
+Explain difference between machine learning and deep learning?
+In Machine learning, computers learn from large datasets using algorithms to perform tasks like prediction and recommendation. Whereas Deep learning uses a complex structure of algorithms developed similar to the human brain.
+
+
+What are different stages in machine learning?
+1. Data Collection: In this step, collect data from different sources like files, databases, pictures, audio, video etc
+2. Data Pre-Procssing: It covers cleaning data. Includes removing duplicate values, handling missing values etc
+3. Selecting Model: Choose correct model based on dataset complexity and prediction type
+4. Train Model: Train the model using train data set
+5. Evaluate Model: Evaluate model using test data set which model never seen it
+6. Hypertuning and Optimization: Hyper tune parameters and test performance
+7. Deploy Model: Deploy the model
+
+
+What are different types in machine learning?
+Machine learning has mainly three types
+1. Supervised Learning
+2. Unsupervised Learning
+3. Semi Supervised Learning
+4.Reinforcement Learning
+
+
+What is supervised learning?
+The training dataset has input features and output labels. The model learns the relationship between input and output. After training, it can predict the output for new input data.
+
+
+What is unsupervised learning?
+The training dataset has only input features and no output labels. The model trains on input data to find patterns or groups, such as clusters.
+Unsupervised learning does not predict outputs. it discovers patterns or groups in unlabeled data
+
+What is Semisupervised learning?
+It is not fully supervised nor unsupervised, means some of the data has output features and some has no output features.
+
+
+What is reinforcement learning?
+The model (agent) learns by interacting with an environment. It takes actions and receives rewards or penalties, and learns to choose actions that maximize total reward.
+
+
+
+What is entropy?
+Entropy measures the impurity or uncertainty present in the data
+
+
+What is information gain?
+It indicates how much information a particular feature or variable give us about the final outcome
+It will tell us which question to ask and which attribute should be selected as decision node.
+
+
+What is confusion matrix?
+Confusion matrix is a table that describe performance of classification model on test data for which true value are known.
+
+
+ 
+What is regression?
+Regression is a machine learning technique used to predict number. Output is contineous number
+Predicting continuous numerical values using past data
+
+What regression will do?
+- Looks at input features (X)
+- Looks at output labels (y)
+- Finds and learn relationship between them
+- Uses leared rearned relationship to predict new features.
+
+
+
+What is linear regression?
+Linear regression is a machine learning algorithm used to predict number by fitting stright line through data. It's output is continueos value.
+Relationship between input and output is straight line
+It comes under regression task
+
+y = mx + c
+where 
+	y = output
+	m = slope (how fast y increases)
+	x = input feaure
+	c = intercept (starting value)
+
+
+Give me an example how liner regression will work?
+X, y = (1, 3), (2, 4), (3, 2), (4, 4), (5, 5)
+
+We need to findout m and c for y = mx + c
+so x and y are mean of X and y
+
+so x = 3 and y = 3.6
+
+m = sum((x-x`)(y-y`))/ sum((x-x`)**2)
+
+assume m = 0.4 and c = 2.4
+
+so now predicted points are
+y = 0.4 * 1 + 2.4 for x = 1 and same for remaing
+once you draw that is predicted line and check error between actual y and predicted y
+
+
+How does linear regression will learn?
+- Take input features (X) and target values (y)
+- Assume a linear relationship y = wX + b
+- Start with Random Line
+- Make predictions
+- Calculate error using Mean Squared Error (MSE)
+- Update weights and bias to reduce error
+- Repeat until error is minimized
+- Use the final equation to predict continuous values
+Repeated block: Prediction → Loss → Update
+
+
+When should we use linear regression?
+- Output is numeric
+- Relationship is roughly linear
+- Data doen't have extreme outliers
+If you are predicting a number and the relationship looks like a straight line
+
+
+What is R**2 in linear regression?
+R**2 tell us how good is the line we draw.
+R**2 = sum((y_pred - y`)**2) / sum((y - y`)**2)
+
+
+What is adjusted R**2?
+R**2 never decrease eventhough adding unnecessary features
+Adjusted R**2 tell us how good is the line we draw without unncecessary features.
+
+
+What do you mean by best fit?
+Total error between actual values and predicted values should be minimum.
+
+
+
+What is logistic regression?
+Logistic regression is a machine learning algorithm used for classification problem.
+eventhough name says regression, it is used for classification problem.
+It's output is binary value like 0 and 1, yes and no, pass and fail, spam and not spam etc.
+Relationship between input and output is S - shaped curve.
+It comes under regression task
+Logistic Regression predicts probabilities and class labels using a sigmoid function.
+
+
+How logistic regression will work?
+- Take input features (X) and class labels (y ∈ {0,1})
+- Compute linear combination z = wX + b
+- Apply sigmoid function to convert z into probability
+- Calculate error using Log Loss (Cross-Entropy)
+- Update weights and bias to reduce error
+- Repeat until loss is minimized
+- Apply threshold (usually 0.5)
+- Output class labels (0 or 1)
+Repeated block: Linear output → Sigmoid → Loss → Update
+
+When to use logistic regression?
+- Binary output
+- when you want probability and class. Class means 0 and 1, yes and no etc
+- Relationship is roughly linear
+- Dataset is small or medium
+
+
+When not to use logistic regression?
+- If output has more than two classes
+- If data has ver complex non-linear patterns
+- If feature relationships are highly complex
+
+
+What do you mean by linearly separable?
+Data is linearly separable if you can separate classes using a straight line (or flat surface).
+Ex:
+Suppose we have
+	Red dots → Class 0
+	Blue dots → Class 1
+If you can draw one straight line that separates red and blue points without mixing, the data is linearly separable.
+
+
+What do you mean by non-linear?
+When a straight line is NOT enough to separate the data.
+You need:
+	Curves
+	Circles
+	Complex shapes
+Ex:
+Imagine points arranged in a circle:
+	Class 1 → Inside the circle
+	Class 0 → Outside the circle
+No straight line can separate them, A curve is needed
+
+
+What is Multicollinearity?
+Multicollinearity happens when two or more input features are highly correlated with each other.
+They carry almost the same information.
+Ex:
+Suppose you are predicting house price using:
+	Feature 1: House size in square feet
+	Feature 2: House size in square meters
+These two features are strongly correlated (1 sq m ≈ 10.76 sq ft).
+This is multicollinearity.
+
+
+
+Difference between linear and logistic regression?
+
+| Step         | Linear Regression | Logistic Regression |
+| ------------ | ----------------- | ------------------- |
+| Input        | Features (X)      | Features (X)        |
+| Equation     | y = mX + c        | z = mX + c          |
+| Extra step   | None              | Sigmoid             |
+| Output       | Number            | Probability         |
+| Final result | Continuous value  | Class (0/1)         |
+| Loss         | MSE               | Log Loss            |
+
+
+What is classification?
+Classification is a process of dividing dataset into different categories or groups by adding label.
+
+
+
+What is decision tree?
+Decision tree is a graphical representations of all possibilites to a decision based on certain conditions.
+
+
+What are reinforcement learning definations?
+Agent: Agent is reinforcement learning algorithm which learns from trail and error
+Environment: Environment is place where agent moves.
+Action: All possible steps an agent can take
+State: Current condition returned by the environment
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

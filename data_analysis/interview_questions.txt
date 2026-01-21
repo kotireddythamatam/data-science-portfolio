@@ -1,0 +1,330 @@
+
+Statistics:
+----------
+Statistics is a mathematical science of collecting, cleaning, exploring, analysing and interpretation of data.
+Data should be measured. We are using statics on data to make better decisions.
+
+
+What is data?
+Data is the collection of facts, values or observations about something.
+Data is raw information collected for analysis or decision making.
+
+
+What are different types of data?
+1. Qualitative data
+2. Quantitative data
+
+
+What is Qualitative data?
+Qualitative data is data that describes qualities or categories. It is usually written in words, not numbers.
+Ex:
+Color → Red, Blue, Green
+Gender → Male, Female
+Food type → Veg, Non-veg
+Feedback → Good, Bad, Average
+
+
+What is Quantitave data?
+Quantitative data is data that describes quantities or numbers. It is written in numerical form.
+Ex:
+Age (25 years)
+Height (170 cm)
+Number of children (2)
+
+
+What are different types in qualitative data?
+1. Nominal data
+2. Ordinal data
+
+
+What is nominal data?
+Nominal data which can be distinct categories and no ranking implied. No arithematic operation.
+Ex: Gender, colors, blood group
+
+
+What is ordinal data?
+Ordinal data which can be distinct categories and ranking implied. No arithematic operation.
+Ex: Ranks (1st, 2nd, 3rd), ratings (Good, Better, Best)
+
+
+What are different types of quantitative data?
+1. Discrete data
+2. Contineous data
+
+
+What is discrete data?
+Data that can be measured in whole numbers
+Ex: Number of students, number of cars
+
+
+What is contineous data?
+Data that can be measured in decimal numbers
+Ex: Height, weight, temperature, time
+
+
+What is Interval data?
+Interval Data where difference between measurements is meaningfull quanity but don't have true zero point. Addition and substraction can be done
+ex: temperature(at 0 temperature also some heat will be there)
+
+
+What is Ratio data?
+Ratio data where difference between measurements is meaningfull quantity and have true zero point. All arithematic operations can be done.
+Ex: age, weight 
+
+
+What is population?
+population is the complete set of individuals, items, or data points that you want to study or draw conclusions about
+
+
+What is sample?
+Sample is a subset of population.
+
+
+What are different types of sampling techniques?
+1. Probability sampling
+2. Non-probability sampling
+
+
+What are different types of probability sampling techniques?
+1. Random sampling
+2. Stratified sampling
+3. Systematic sampling
+
+
+What is random sampling?
+It is a common practise in sample collection. There is no logic or priority to choose sample data.
+This technique used when entie population has equal chance of getting selected.
+
+
+What is stratified sampling?
+Divide population into sub groups based some characteristics. It should be non overlapping groups.
+ex: gender based, age group based
+
+
+What is systamatic sampling?
+There should be logic for selecting sample.
+ex: every 5th person in a class is my sample data.
+
+
+
+What are different types of statistics?
+1. Descriptive Statistics
+2. Inferential Statistics
+
+
+What is descriptive statistics?
+Describe main characteristics and summary of data.
+
+
+What is inferential statistics?
+Making predictions about a population using sample data.
+
+
+
+
+What are different types of descriptive statistics?
+1. Measure of Central Tendancy
+2. Measures of Dispersion
+
+
+What is measure of central tendancy?
+The data values are present in middle of distribution or towards end.
+
+
+What are different measures of central tendancy?
+1. Mean
+2. Median
+3. Mode
+
+
+What is mean?
+Average of all value of the data
+Ex: 2, 3, 6, 9, 1, 6
+mean = (2 + 3 + 6 + 9 + 1 + 6) / 2
+
+
+What is Median?
+Middle number of data after making sorted. If length is even then average of middle two numbers.
+Ex: 1, 2, 3, 6, 6, 9
+median = (3 + 6) / 2
+
+
+What is mode?
+Most frequently occuring value in the dataset
+Ex: 2, 3, 6, 9, 1, 6
+mode = 6
+
+
+What is measures of dispersion?
+Describes variability in dataset
+
+
+What are different measures of dispersion?
+1. Range
+2. Variance
+3. Standard Deviation
+
+
+What is range?
+Difference between largest and smallest value after making ascending oreder.
+Ex: 1, 2, 3, 6, 6, 9
+range = 9 - 1 = 8
+
+
+What is Inter Quartile range?
+Difference between Q3 and Q1
+IQR = Q3 - Q1
+
+
+What is variance?
+Variance describes how much a random variable differs from its excepted value.
+The average of squared difference between mean. If we are finding variance of sample then n-1.
+Ex: 2, 3, 6, 9, 1, 6
+mean = (2 + 3 + 6 + 9 + 1 + 6) / 2
+variance = (x-mean)**2 / n
+
+
+What is standard deviation?
+Standard deviation describes difference between each element from the mean.
+standard deviation = sqrt of variance 
+
+
+
+What is probability?
+Probability is the measure of how likely an ever occur. It is ratio of desired outcomes to total outcomes
+
+
+
+What are different probability distributions?
+1. Discrete distributions
+	- Binomial distribution
+	- Poission distribution
+	- Geometric distribution
+
+2. Contineous distributions
+	- Normal distribution
+	- Uniform distribution
+	- Exponential distribution
+	- Gamma distribution
+
+
+What is binomial distribution?
+Used to find the number of successes in a fixed number of trials.
+Example: Number of heads in 10 coin tosses.
+
+
+What is poisson distribution?
+Used to find the number of events occurring in a fixed time or area.
+Example: Number of calls received per hour.
+
+
+What is geometric distribution?
+Used to find the number of trials needed to get the first success.
+Example: Number of tosses until the first head appears.
+
+
+What is normal distribution?
+A bell-shaped symmetric distribution around the mean.
+Example: Heights of students.
+
+
+What is uniform distribution?
+All values in a given range are equally likely.
+Example: Random number between 1 and 10.
+
+
+What is exponential distribution?
+Models time between two successive events.
+Example: Time between arrivals of customers.
+
+
+What is gamma distribution?
+Models waiting time for multiple events to occur.
+Example: Time taken to serve several customers in a bank.
+
+
+What is structured data?
+Data which is organized in fixed format and predefined schema.
+Ex: Excel files, Database tables etc
+
+
+What is unstructured data?
+Data which is not organized in fixed format and no predefined schema
+Ex: test files, word document, audio, video etc
+
+
+What is semi-structured data?
+Data which is not fully organized in fixed format but predefined scema
+Ex: Json, xml, html etc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

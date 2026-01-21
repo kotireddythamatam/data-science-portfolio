@@ -1,0 +1,529 @@
+
+Newly created nueral network model is like new baby, both have no intelligence to react on different tasks.
+Need to train to get some knowledge so baby and neural network will make in begining. but after getting some experience or knowledge both can get nearly accurate.
+
+Just like our sense organs collect data (visual, feel, audio, etc.) and send it to the brain for interpretation,
+in deep learning, sensors or data sources (like cameras or microphones) collect raw data, and neural networks process it to recognize patterns — like detecting objects, speech, or emotions.
+
+
+Artificial Intelligence:
+-----------------------
+Making machines behave intelligently, means ai will make machines to perform tasks with human intelligence.
+In other words, make machines to perform tasks like how humans are doing.
+
+
+Machine Learning:
+----------------
+It is subset of AI. Making machines learn from data, means machines learn from data instead of explicity programmed. In other words, making machines self learn insted of some external training.
+
+
+Deep Learning:
+--------------
+It is subset of machine learning. Using neural networks to solve very complex problems, means mimic human brain. In other words, machine should learn same way how humans are learning. Deep learning follows human brain neural.
+
+Deep learning is a subset of machine learning that:
+Uses multiple layers (neural networks)
+Automatically learns features from raw data
+Handles complex tasks like images, audio, and language
+
+
+Data Science:
+------------
+Getting insites from data.
+
+
+
+
+
+
+Biological nueron:
+-----------------
+A biological nueron is a nerve cell in brain. Artificial nueral networks are inspired by biological nuerons in brain.
+
+Ex1: When Very Hot Water Touches the Hand (Painful Case)
+The skin senses the high temperature of the water through pain receptors (nociceptors).
+A signal is immediately sent to the spinal cord through sensory neurons.
+The reflex action is triggered — the spinal cord sends a command to the muscles, causing the hand to move away quickly.
+At the same time, the signal also reaches the brain, which processes and records the experience:
+“This water was too hot and caused pain.”
+The brain stores this information so that next time, even before touching very hot water, you can recognize and avoid it.
+
+Ex2: When Moderately Hot Water Touches the Hand (No Pain Case)
+The skin senses the warmth of the water through temperature receptors (thermoreceptors).
+A signal is sent to the spinal cord and then to the brain.
+Since the heat is not harmful, no reflex action or quick hand movement is triggered.
+The brain interprets the temperature as tolerable and stores the experience:
+“This water feels warm but not painful.”
+The next time you see similar warm water, your brain recalls that it’s safe to touch.
+
+
+
+Perceptron:
+-----------
+It is simplest form of neural network with single neuron and no hidden layers.
+It takes input, multiplies them by weights, adds them up with bias, and then passes result through an activation function to product output.
+Single perceptron can solve linearly separable problems.
+Deep learning models are made by combining many perceptrons to form multi layer neural network.
+Perceptron = basic building block
+Multi-Layer Perceptron (MLP) = foundation of modern deep learning
+The perceptron visually has two layers, but only one learns, which is why it’s called a single-layer network.
+
+How It Works (Step-by-Step)
+Let’s say you have two inputs: x1 and x2 (like features from data).
+Each input has a weight (w1, w2) that shows how important that each input is.
+The perceptron also has a bias (b) — a constant added to improve learning.
+Then, it calculates: z = (x1 × w1) + (x2 × w2) + b
+Then applies an activation function (usually a step or sigmoid): y=f(z)
+Where:
+If f(z) ≥ threshold → output 1
+Else → output 0
+
+
+
+Artificial Neuron:
+------------------
+It is a mathematical model that mimic how biological neuron works. An artificial nueron is a generalized and advanced version of the perceptron.
+
+Takes inputs (x₁, x₂, x₃, …)
+Multiplies them by weights (w₁, w₂, w₃, …)
+Adds a bias (b)
+Applies an activation function (σ)
+Produces an output (y)
+Mathematical Formula: y = σ(w1x1 + w2x2 + w3x3 + b)
+
+Where:
+
+xi → input values
+wi → weights (importance of each input)
+b → bias (adjusts the threshold)
+σ → activation function (like ReLU, Sigmoid, etc.)
+y → final output
+
+
+
+Perceptron vs Artificial Neuron:
+--------------------------------
+| Concept     | Perceptron                     | Artificial Neuron                               |
+| ----------- | ------------------------------ | ----------------------------------------------- |
+| Simple View | Old, basic neuron              | Modern, flexible neuron                         |
+| Activation  | Step function                  | Any (ReLU, Sigmoid, etc.)                       |
+| Layers      | Only one                       | Many (in deep networks)                         |
+| Output      | Binary                         | Continuous / multi-output                       |
+| Use Case    | Simple linearly separable data | Complex, real-world data (images, speech, text) |
+
+| Layer Type   | Perceptron           | Artificial Neuron                 |
+| ------------ | -------------------- | --------------------------------- |
+| Input Layer  | Accepts input data   | Accepts input data                |
+| Hidden Layer | No hidden layers     | One or more layers                |
+| Output Layer | Single binary output | One or multiple outputs           |
+| Activation   | Step function        | ReLU, Sigmoid, Tanh, etc.         |
+| Output Type  | 0 or 1               | Continuous/probabilistic          |
+| Complexity   | Simple, linear       | Complex, non-linear               |
+
+
+
+
+Binary classification:
+----------------------
+It is a type of machine learning or deeplearning problem where model must decide between two possible outcomes.
+Binary means two and classification means putting data into categories.
+Output layer has one nueron
+Activation function should be Sigmoid which gives numbers between 0 and 1.
+Loss function could be Binary Cross-Entropy
+Ex:
+| Problem            | Input            | Output (Prediction)    |
+| ------------------ | ---------------- | ---------------------- |
+| Email filtering    | Email text       | Spam or Not Spam       |
+| Disease detection  | Patient data     | Has disease or Healthy |
+| Credit approval    | Loan application | Approved or Rejected   |
+| Sentiment analysis | Movie review     | Positive or Negative   |
+| Image recognition  | Picture          | Cat or Dog             |
+
+
+Nural network phases:
+--------------------
+Nural network has two phases. 
+- Forward Propagation (make a prediction)
+- Backward Propagation (learn from the error and update weights)
+
+
+Forward Propagation:
+-------------------
+Forward propagation is the process where data moves forward direction through nueral network. multiplied by weights, added with bias, activated by functions and produces an output prediction.
+
+	input layer --> hidden layer(s) -- > output layer
+
+How it Works
+Each neuron performs these 3 steps:
+
+Weighted Sum: Multiply each input by its weight and add them up with bias
+	z = w1x1 + w2x2 + ... + b
+
+Activation Function: Apply an activation (like Sigmoid, ReLU, Tanh, etc.)
+	a = σ(z)
+
+Pass Output Forward: The output of one layer becomes the input for the next layer.
+
+
+
+Backward Propagation:
+---------------------
+Once forward propagation completes, network analyse how far the predicted value to the real value.
+so the difference between real value and predicted value is loss or error.
+If the loss is near to zero then its fine, other wise loss is near to one then back propagation will come into picture.
+Backpropagation is the process of sending that error or loss backwrd through the network and updating weights and biases to make next prediction more accurate.
+This adjustment happens from barckward direction
+	output layer --> hidden layer(s) --> input layer
+
+How the Process Works
+Step 1️ — Forward Pass
+	Inputs go through the network.
+	Output prediction is generated.
+
+Step 2️ — Compute Loss
+	Compare prediction (ŷ) with the true value (y).
+	Example: Loss = (ŷ − y)²
+
+Step 3️ — Backward Pass (Backpropagation)
+	Calculate gradients: how much each weight contributed to the error.
+	Propagate this error backward through layers using the chain rule (from calculus).
+
+Step 4️ — Weight Update
+	Adjust weights slightly to reduce future errors:
+	w = w − η × ∂w/∂L
+
+	(η = learning rate)
+	Then repeat for many epochs (training iterations). 
+
+
+
+Example 1: input(x) = 2 and actual output(y) = 4, learning rate (n) = 0.1 initial weight = 0.5 and bias = 0
+----------
+			
+step1: Forward propagation: ~y = wx + b
+							   = (0.5 * 2) + 0
+							   = 1 + 0
+							~y = 1
+
+step2: Calculate loss Using Mean Squared Error: L = (y - ~y)**2
+												  = (4 - 1)**2
+												  = 3**2
+												L = 9
+
+step3: Backward propagation:
+	
+	Gradient w.r.t weight: dL/dw = 2 * (y - ~y) * (-x)
+								 = 2 *(4 - 1) * (-2)
+								 = 2 * 3* (-2)
+						   dL/dw = -12
+
+
+	Gradient w.r.t bias: dL/db = 2 * (y - ~y) * (-1)
+							   = 2 * (4 - 1) * (-1)
+							   = 2 * 3 * (-1)
+						 dL/db = -6
+
+step4: Update weights and bias, we move opposite to the gradient direction for reducing error
+	
+	wnew = w - n * dL/dw
+		 = 0.5 - 0.1 * (-12)
+		 = 0.5 - (-1.2)
+		 = 0.5 + 1.2
+	wnew = 1.7
+
+	bnew = b - n * dL/db
+		 = 0 - 0.1 * (-6)
+		 = 0 - (-0.6)
+		 = 0 + 0.6
+	bnew = 0.6
+
+step5: Forward propagation with updated parameters: ~y = wx + b
+													   = 1.7 * 2 + 0.6
+													   = 3.4 + 0.6
+													~y = 4
+
+now predicted value and actual value matching.
+If it is not matching then need to follow same steps again and again till it matches.
+
+
+
+dL/dw and dL/db derivatives:
+---------------------------
+We know Mean Suared Error loss function (L) = (y - ~y)**2
+		Predicted linear nueron (~y) = wx + b
+
+		Differentiate loss function w.r.t predicted value
+			dL/d~y = d/d~y((y - ~y)**2
+			dL/d~y = 2 * (y - ~y) (-1)         derivative of (y - ŷ)**2 is 2(y - ŷ)(-1))
+
+		Differentiate predicted linear nueron w.r.t weight
+			d~y/dw = d/dw(wx + b)
+			d~y/dw = x
+
+		Differentiate predicted linear nueron w.r.t bias
+			d~y/db = d/db(wx + b)
+			d~y/db = 1
+
+		Let's apply chain rule for loss changes with weight
+			dL/dw = dL/d~y * d~y/dw
+				  = (2 * (y - ~y) (-1)) * (x)
+			dL/dw = 2 * (y - ~y) * (-x) 
+
+		Let's apply chain rule for loss fucntion with bias
+			dL/db = dL/d~y * d~y/db
+				  = (2 * (y - ~y) (-1)) * (1)
+			dL/db = 2 * (y - ~y) * (-1)
+
+
+
+Activation Functions:
+--------------------
+An activation function descides wether a nueron should activate(fire) or not.
+It adds non-linearity to the network.
+without activation function, our model will be just like linear model. No matter how many layers we add.
+It makes deep networks capable of learning complex problems.
+
+
+Step Function:
+-------------
+f(x) = 1 if x>=0 else 0
+It is used in early perceptrons for binary output, bad for training, it is not usefull for practical trainings.
+
+
+
+Sigmoid (Logistic):
+-------------------
+f(x) = 1 / (1 + e**-x)
+
+Advantages:
+	- Output between 0 and 1, best for binary probabilities.
+	- Smooth, Contineous and differentiable
+
+Disadvantages:
+	- Vanishing gradients for large +x or -x, gradients will becomes 0 and training will slowdown.
+	- Not zero centred, can cause inefficient weight updates.
+	- Computationally more expensive.
+
+Use:
+	- Best for binary classifications like spam mail or not
+
+
+
+Tanh (Hyperbolic Tangent):
+--------------------------
+f(x) = tanh(x) = (e**z - e**-z) / (e**z + e**-z)
+Maps input into (-1, 1)
+
+Advantages:
+	- Zero centered, so better convergence than sigmoid
+	- Smooth and differentiable
+
+Disadvantages:
+	- Suffers from vanishing gradients like sigmoid
+	- Computationally expensive
+
+
+ReLU (Rectified Linear Unit):
+----------------------------
+f(x) = max(0, x)
+Pass positive values as-is, but make negative values to 0
+
+Advantages:
+	- Simple and computationally efficient
+	- Helps reducing vanishing gradients problem
+	- Always faster convergence
+
+Disadvantages:
+	- Nueron can die if many inputs are negative, means nueron stops learning
+	- Not zero centered
+
+
+Leaky ReLU:
+-----------
+f(x) = max(0.01x, x)
+same as Relu but keep small negative values to keep learning
+
+Advantages:
+	- Fixes Relu dead nueron problem
+	- Speed and efficient
+
+Disadvantages:
+	- Non centered
+	- The small slope (α) must be tuned — no universal value
+
+
+Parametric ReLU (PReLU):
+------------------------
+same as leaky Relu but a is learned during training.
+
+Advantages:
+	- Learns best negative slopes automatically
+	- Out performed fixed leaky Relu
+
+Disadvantages:
+	- Slightly more complex
+
+
+| Function   | Range  | Use Case            | Advantages      | Disadvantages      |
+| ---------- | ------ | ------------------- | --------------- | ------------------ |
+| Linear     | (-∞,∞) | Regression Output   | Simple          | No non-linearity   |
+| Step       | 0/1    | Theoretical         | Simple concept  | Not differentiable |
+| Sigmoid    | (0,1)  | Binary Output       | Probabilities   | Vanishing gradient |
+| Tanh       | (-1,1) | Hidden (older nets) | Zero-centered   | Vanishing gradient |
+| ReLU       | [0,∞)  | Hidden (default)    | Fast, efficient | Dead neurons       |
+| Leaky ReLU | (-∞,∞) | Hidden              | Fixes dead ReLU | Needs tuning       |
+| PReLU      | (-∞,∞) | Hidden              | Learns slope    | More parameters    |
+| Softmax    | (0,1)  | Multi-class Output  | Probabilities   | Overflow risk      |
+| Swish      | (-∞,∞) | Deep CNNs           | Smooth          | Slower             |
+| GELU       | (-∞,∞) | Transformers        | Best accuracy   | Complex compute    |
+
+
+
+
+
+ANN can solve below problems:
+-----------------------------
+| Task                           | Output neurons | Activation | Loss Function | Example                |
+| ------------------------------ | -------------- | ---------- | ------------- | ---------------------- |
+| **Binary Classification**      | 1              | Sigmoid    | BCE           | Spam vs Not Spam       |
+| **Multi-Class Classification** | n classes      | Softmax    | CCE           | Digit recognition      |
+| **Regression**                 | 1              | Linear     | MSE           | House price prediction |
+
+
+
+
+
+
+
+Neural network work flow:
+-------------------------
+Input Layer: Take data as input
+Several Hidden Layers: Train each neural with input and understand patterns in the data
+Output Layer: Send predections output
+
+
+Learning Process of Neural Network:
+----------------------------------
+Forward Propagation: Process data from input layer to output layer
+	y = f(sum(wi.xi+bi))
+	where
+		f() - Activation function
+		w - Weight of neural i (Weight of each neural, tells how important neural is)
+		b - Bias fo neural i (Shifting f() left or right)
+
+Backward Propagation: Process data from output layer to hidden layers
+
+
+Learning Algorithm of Neural Network:
+------------------------------------
+- Initialize parameters with random values
+- Feed input data to neural network
+- Compare predicted value with actual value and Calculate loss
+- Perform back propagation to propagate this loss
+- Update parameters based on loss
+- Iterate above steps till loss is minimized
+
+
+Terminologies used in Neural Networks:
+--------------------------------------
+Activation Functions:
+--------------------
+Introduces non-linearity in neural networks and decides whether can nuron can contribute to next layer 
+
+
+Types of Activation Functions:
+-----------------------------
+Step Funtion:
+------------
+If value greater than threshold value then activate and if less than threshold then do not activate.
+
+Linear Function:
+---------------
+y = mx + c
+y belogns -infinity to infinity
+
+Sigmoid Function:
+----------------
+sig(t) = 1 / (1 + e ** -t)
+sig(t) belongs 0 to 1
+
+Tanh Function:
+-------------
+tanh(x) = 2 sigmoid(2x) - 1
+tanh(x) belongs -1 to 1
+
+ReLU (Rectified Linear Unit) Function:
+-------------------------------------
+R(z) = max(0, x)
+R(z) belongs 0 to infinity
+
+
+
+Loss Functions:
+--------------
+Quantify deviations of predicted output by the neural network to the actual output.
+
+Regression: Squared error, Huber loss
+Binary Classification: Binary cross-entropy, Hinge loss
+Multi-class Classification: Multi-class cross-entropy, Kullback Divergence
+
+
+Gradient Descent:
+-----------------
+Iterative algorithm that starts of at a random point on the loss function and travels down its slope in steps until it reaches lowest point of the function
+
+Model Parameters:
+----------------
+Wieghts and bias are model parameters. Value can be estimated from the data
+
+Model Hyperparameters:
+----------------------
+Learning rate, C etc are model hyperparameters. Value can't be estimated from the data. Manually specify parameter.
+
+Epochs, Batches, Batch sizes and Iterations:
+--------------------------------------------
+Need these terms only if dataset is large
+
+Epochs:
+-------
+When entire dataset passes forward and backward through neural network once
+We use multiple epochs to help our model better
+
+Iterations:
+----------
+No.of batches needed to complete one epoch
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
