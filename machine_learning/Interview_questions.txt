@@ -1,4 +1,17 @@
 
+Beginner learning order (IMPORTANT)
+1️⃣ Logistic Regression
+2️⃣ KNN
+3️⃣ Decision Tree
+Random Forest
+4️⃣ Naive Bayes
+5️⃣ SVM
+
+📌 What datasets to use while learning
+1. Iris
+2. Breast Cancer
+3. Wine
+4. Digits
 
 
 What is machine learning?
@@ -29,7 +42,7 @@ Machine learning has mainly three types
 1. Supervised Learning
 2. Unsupervised Learning
 3. Semi Supervised Learning
-4.Reinforcement Learning
+4. Reinforcement Learning
 
 
 What is supervised learning?
@@ -48,7 +61,6 @@ What is reinforcement learning?
 The model (agent) learns by interacting with an environment. It takes actions and receives rewards or penalties, and learns to choose actions that maximize total reward.
 
 
-
 What is entropy?
 Entropy measures the impurity or uncertainty present in the data
 
@@ -60,7 +72,6 @@ It will tell us which question to ask and which attribute should be selected as 
 
 What is confusion matrix?
 Confusion matrix is a table that describe performance of classification model on test data for which true value are known.
-
 
  
 What is regression?
@@ -237,23 +248,140 @@ State: Current condition returned by the environment
 
 
 
+What is coefficient?
+These are parameters which shows how strongly independent variable affects dependent variable.
+
+
+What is intercept?
+Intercept is a constant which indicates starting point.
+
+
+What are different types of logistic regression?
+1. Binary Logistic Regression:
+	Target or dependant varible has exaclty two outcomes
+	Ex: yes and no, spam and not spam etc
+2. Multinominal Logistic Regression:
+	Target or dependant variable has more than two outcomes and order is not important
+	Ex: cat, dog and mouse etc
+3. Ordinal Logistic Regression:
+	Target or dependant variable has more than two outcomes and order is important
+	Ex: A, B, C, D(rankings) etc
+
+
+How train_test_split work if test_size=0.2?
+without stratify case, shuffle all records in data. take first 80% as train data and remaing 20% as test data.
+with stratify case uses stratified sampling technique, group by class all records in data. Take 20% as test data and remaing as train data from each group
+
+
+Difference between train_test_split(test_size=0.2) vs train_test_split(train_size=0.8)?
+in train test split alway head data used as train tail data used as test
+Ex: 
+	X = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+	y = [1, 1, 1, 1, 1, 1, 0, 0, 0, 0]
+
+	if stratify=y then group based on classes (1 = 60%, 0 = 40%)
+		class 1 = [10, 11, 12, 13, 14, 15]
+		class 0 = [16, 17, 18, 19]
+
+		if shuffle=True then
+			class1_shuffled = [12,10,14,11,15,13]
+			class0_shuffled = [18,16,19,17]
+
+			Class 1:
+				class1_train = class1_shuffled * 80% (means first 80% of the data) = [12,10,14,11,15]
+				class1_test  = class1_train - remaing items = [13]
+
+			Class 0:
+				class0_train = class0_shuffled * 80% (means first 80% of the data) =  = [18,16,19]
+				class0_test = class0_train - remaing items = [17]
+
+			finally combine both classes for X and for y we can consider corresponding y
+				X_train = class1_train + class0_train = [12,10,14,11,15,18,16,19]
+				y_train = [ 1, 1, 1, 1, 1, 0, 0, 0]
+
+				X_test  = class1_test + class0_test = [13,17]
+				y_test  = [ 1, 0]
+
+		otherwise
+			this case not possible
+
+	otherwise same X, y
+		X = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+		y = [1, 1, 1, 1, 1, 1, 0, 0, 0, 0]
+
+		if shuffle=True then
+			X_shuffled = [12,18,14,19,11,16,17,13,10,15]
+			y_shuffled = [1, 0, 1, 0, 1, 0, 0, 1, 1, 1]
+
+			X_train = X_shuffled * 80% (means first 80% of the data) = [12,18,14,19,11,16,17,13]
+			y_train = y_shuffled * 80% (means first 80% of the data) = [1,0,1,0,1,0,0,1]
+
+			X_test = X_train - remaing items = [10,15]
+			y_test = y_train - remaing items = [1,1] # no 0 classes
+
+		otherwise		
+			X_train = X * 80% (means first 80% of the data = [10,11,12,13,14,15,16,17]
+			y_train = y * 80% (means first 80% of the data) = [1, 1, 1, 1, 1, 1, 0, 0]
+
+			X_test  = X_train - remaing items = [18,19]
+			y_test  = y_train - remaing items = [0, 0]
+
+
+What is stratify in train_test_split?
+Stratify keeps all class distributions in both train and test data
+
+
+When should use stratify in train_test_split?
+- For classification problems
+- When classes are imbalanced(yes-90%, no-10%)
+- Dataset is small(1f 30 records then Test data may lose no-10% class)
+
+
+When not to use stratify in train_test_split?
+- For regression problems
+- For time series data
+
+
+What is shuffle and random_state in train_test_split?
+Shuffle is used change data order
+random_state is used to control shuffle. Means every time same data split. like Shuffle once, remember the order forever
+
+
+What is the need of shuffle and random_state?
+if no shuffle then train and test split is not good
+if no random state then every time train and test split data will be different.
+
+
+Why do we need to standard scaler?
+Standard scaler makes all features in same scale
+makes mean=0 and standard deviaion=1
+Ex:
+	Height in cm
+	weith in kg
+	It converted raw measurements into distance-from-average scores.
+
+
+What is difference between fit, transform and fit transform?
+fit: Learns parameters from the data
+transform: Applies the learned parameters to transform data
+fit_transform: Learns parameters and transforms the data in one step
+
+
+What is difference between fit_transform(X_train) and transform(X_test)
+fit transform will do learn parameters from X_train data and apply those to X_train data
+transform will apply learned parameters from X_train data to to X_test data
+always call fit_transform first then only transform, because scaler has to learn to transform
+
+
+What is accuracy_score?
+Accuracy score is model evaluation technique, It tells you overall correctness of model
+It is the division between correct predections to the total predictions.
+accuracy_score = correct_predictions / total_predictions
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+What is classification report?
+It is model evaluation technique, It tells you detailed performance of each class
 
 
 
