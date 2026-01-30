@@ -14,6 +14,19 @@ Random Forest
 4. Digits
 
 
+🧠 Beginner Learning Order (IMPORTANT)
+1️⃣ Linear Regression
+2️⃣ Ridge / Lasso
+3️⃣ Decision Tree Regressor
+4️⃣ Random Forest Regressor
+5️⃣ KNN Regressor
+6️⃣ SVR
+
+📌 What datasets to use while learning
+1. load_linnerud
+3. load_diabetes
+
+
 What is machine learning?
 It is a subset of artificial intelligence. Making machines learn from data, means machines learn from data instead of explicity programmed. In other words, making machines self learn insted of some external training.
 

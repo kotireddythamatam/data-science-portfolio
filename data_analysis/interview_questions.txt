@@ -313,8 +313,18 @@ Continuous variable on in which any value can be assumed between tow given value
 ex: weight, time etc.
 
 
+What is meaning of mean == median == mode?
+Mean, median and mode are same means then it is normal distribution. No skew is there. Data distributed equallydbo099
 
 
+What is meaning of mean > median > mode?
+Mean > median > mode means data is right and positive skew. It has long right tail. because large outliers there in data.
+Outliers moving mean to right that's why mean is greater than median.
+
+
+What is meaning of mean < median < mode?
+mean < median < mode means data is left and negative skew. It has long left tail. because small outliers are in data.
+Outliers moving mean to left that's why mean is less than median.
 
 
 
